@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author"content="Dean Marolda">
+    <link rel="icon" type="image/x-icon" href="favicon-2.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>The 906 fishing Reccomendation Page</title>
+    <style>
+        * {
+            background-color: rgb(187, 248, 218);
+           
+        }
+        h1{
+            text-align: center;
+            background-color: aqua;
+            width: 42%;
+            margin: auto;
+            border: 2px solid black;
+        }
+        #buttons{
+            text-align: center;
+            border: 2px solid black;
+           width: 7%;
+           margin: auto;
+           padding-top: 10px;
+           padding-bottom: 10px;
+           background-color: aqua;
+        }
+        p{
+            text-align: center;
+        }
+        #p{
+            border: 2px solid black;
+            text-align: center;
+            border-width: auto;
+            width: 23%;
+            margin: auto;
+        }
+        img{
+            rotate: 90deg;
+            text-align: center;
+            margin: auto;
+            display: block;
+        }
+</style>
+</head>
+<body>
+    <h1>Tackle Reccomendations by Species</h1>
+    <p>Here you can click on different species to get the latest tackle reccomendations for catching your species of choice!</p>
+    <br>
+    <br>
+    <div id="buttons">
+    <button onclick="Walleye()">Walleye</button>
+    <br>
+    <br>
+    <button onclick="Bass()">Bass</button>
+    <br>
+    <br>
+    <button onclick="Pike()">Pike</button>
+    </div>
+    <br>
+    <img  id="line" src="line.tiff.pdf">
+    <img id="lures" src="lures.tiff.pdf"> 
+    <p id="p">Click <a href="intropage.html">Here</a> to go back to the main page. </p>
+<script>
+function Walleye(){
+    alert("Line: Monofilament or Flourocarbon 6-10lb, Lures: Crankbaits, Jerkbaits, and soft platic swimbaits, Bait: Leeches, Nightcrawlers and Minnows")
+}
+function Bass(){
+    alert("Line: Braid 15-30lb or Monofilament or Flourocarbon 8-14lb. Lures: Crankbaits, Jerkbaits, Topwater, Spinnerbaits, Chatterbaits, Jigs, and Softplastics.  Bait: Lecches, Nightcrawlers and Minnows. ")
+}
+function Pike(){
+    alert("Line: Braid 20-40lb or Monofilament or Flourocarbon 10-17lb. Lures: Crankbaits, Topwater, Spinnerbaits, Chatterbaits, Spoons, Inline Spinners, Swimbaits.   Bait: Minnows and Suckers. ")
+}
+</script>
+</body>
+</html>

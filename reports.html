@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author"content="Dean Marolda">
+    <link rel="icon" type="image/x-icon" href="favicon-2.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>The 906 Fishing connection reports Page</title>
+    <style>
+        *{
+            background-color:rgb(187, 248, 218);
+        }
+        form{
+            text-align: center;
+            border: 2px solid black; 
+            background-color: aqua;
+            width: 25%;
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+            background-color: aqua;
+            width: 65%;
+            margin: auto;
+            border: 2px solid black;
+        }
+        p{
+            border: 2px solid black;
+            margin-left: 25%;
+            margin-right: 25%;
+            text-align: center;
+            border-width: auto;
+          
+        }
+        img{
+            margin: auto;
+            display: block;
+        }
+       
+    </style>
+</head>
+<body>
+<h1>Here you can find and post reports by county in the 906!</h1>
+<img src="fishing report picture.jpeg">
+<p id="reports">This is where reports can go.</p>
+<div>
+<form  id="report_form" onsubmit="postreport(event)"> Post a Report!
+    <br>
+    <label for="report_form"><mark>Report:</mark></label>
+    <input type="text" id="report_form" name="report">
+    <br>
+    <label for="report_form"><mark>Time of Start</mark></label>
+    <input type="time" id="report_form" name="time_s">
+    <br>
+    <label for="report_form"><mark>Time of Finish</mark></label>
+    <input type="time" id="report_form" name="time_f">
+    <br>
+    <label for="report_form"><mark>Date of Report:</mark></label>
+    <input type="date" id="report_form" name="date">
+    <br>
+    <label for="report_form"><mark>County fished in:</mark></label>
+    <input list="counties" name="county">
+        <datalist id="counties">
+            <option value="Alger County"></option>
+            <option value="Baraga County"></option>
+            <option value="Chippewa County"></option>
+            <option value="Delta County"></option>
+            <option value="Dickinson County"></option>
+            <option value="Houghton County"></option>
+            <option value="Iron County"></option>
+            <option value="Keweenaw County"></option>
+            <option value="Luce County"></option>
+            <option value="Mackinac County"></option>
+            <option value="Marquette County"></option>
+            <option value="Menominee County"></option>
+            <option value="Ontonagon County"></option>
+            <option value="Schoolcraft County"></option>
+        </datalist>
+        <br>
+    <input type="submit"> 
+    </form>
+</div>
+<p>Click <a href="intropage.html">Here</a> to go back to the main page. </p>
+<script>
+    let reports=[];
+    function postreport(event){
+    event.preventDefault();
+    let formData = new FormData (event.target);
+    reports.push(formData.get("report"));
+    reports.push(formData.get("time_s"));
+    reports.push(formData.get("time_f"));
+    reports.push (formData.get("date"));
+    reports.push (formData.get("county"));
+    document.getElementById("reports").innerHTML=reports;
+    }
+</script>
+</body>
+</html>
